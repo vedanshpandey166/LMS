@@ -58,7 +58,8 @@ Python 3.x installed on your system.
 2. Clone the Repository
 Clone this repository to your local machine:
 
-git clone https://github.com/vedanshpandey166/LMS
+git clone https://github.com/vedanshpandey166/LMS.git
+
 cd LMS
 
 3. ⚠️ Important: Update File Paths
