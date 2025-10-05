@@ -58,7 +58,7 @@ Python 3.x installed on your system.
 2. Clone the Repository
 Clone this repository to your local machine:
 
-git clone [https://github.com/your-username/LMS.git](https://github.com/your-username/LMS.git)
+git clone https://github.com/vedanshpandey166/LMS
 cd LMS
 
 3. ⚠️ Important: Update File Paths
@@ -81,6 +81,12 @@ user_transaction.py (in the go_home function)
 
 4. Database Setup
 The library.db file is included in the repository. The application will use this file automatically. The first time you run the login.py script, it will ensure the necessary tables exist and create a default admin user if one isn't present.
+
+Important: Before running the main application for the first time, you must update the database schema to support all features. Run the included update_db.py script from your terminal:
+
+python update_db.py
+
+This script adds the fulfilled_date column to the Requests table, which is essential for the admin approval workflow. It is safe to run multiple times but only needs to be run once.
 
 5. Run the Application
 The entry point for the application is the login.py script. To start the LMS, run the following command from your terminal in the project's root directory:
@@ -121,6 +127,8 @@ user_reports.py: Displays personalized reports for the logged-in user.
 user_transaction.py: Handles user-facing transactions like checking availability, issuing requests, and returning items.
 
 library.db: The SQLite database file containing all the application data.
+
+update_db.py: A one-time script to update the database schema.
 
 Future Improvements
 [ ] Refactor Paths: Remove hardcoded absolute paths and use relative paths for better portability.
